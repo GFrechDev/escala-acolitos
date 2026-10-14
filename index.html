@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escala de Acólitos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+  <img src="imagens/arquidiocese.png" alt="Arquidiocese de Joinville" class="logo logo-imagem">
+
+  <div class="titulo">
+    <h1>Escala de Acólitos</h1>
+    <p>Matriz Nossa Senhora da Graça</p>
+  </div>
+
+  <img src="imagens/fundo.png" alt="Nossa Senhora da Graça" class="logo logo-imagem">
+</header>
+
+  <main>
+    <section id="seletor-mes">
+  <label for="select-mes">Escala de:</label>
+  <select id="select-mes"></select>
+  <select id="select-ano"></select>
+   </section>
+    <section id="escolha">
+      <h2>Escolha seus horários</h2>
+      <label for="nome">Seu nome:</label>
+      <select id="nome">
+      <option value="">Selecione seu nome</option>
+      </select>
+
+      <p>Escolha <strong>2</strong> horários.
+         Selecionados: <span id="contador">0</span>/2</p>
+
+      <p id="aviso"></p>
+      <div id="lista-horarios"></div>
+
+      <button id="btn-confirmar">Confirmar escolha</button>
+    </section>
+
+    <section id="escala">
+      <h2>Escala do mês</h2>
+      <p class="legenda">
+       <span><span class="ponto vazia"></span>Sem acólitos</span>
+       <span><span class="ponto parcial"></span>Falta 1</span>
+       <span><span class="ponto completa"></span>Completa</span>
+      </p>
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Horário</th><th>Acólitos</th></tr>
+        </thead>
+        <tbody id="tabela-escala"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
